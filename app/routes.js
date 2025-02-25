@@ -47,15 +47,3 @@ router.use('/', (req, res, next) => {
 
 
   // Add your routes here
-
-router.post('/hmct-check-answer', function (req, res) {
-
-  var hmctCheck = req.session.data['hmct-check']
-
-  if (hmctCheck == "Yes"){
-    res.redirect('/v1/loading-customer')
-  } else {
-    res.redirect('/v1/please-upload-hmct')
-  }
-
-})

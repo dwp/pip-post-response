@@ -1,22 +1,24 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Index" %}
+{% set pageName="Home" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
 
-    <h2 class="govuk-heading-m">Versions</h2>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <a class="govuk-link" href="/v1/home">v1.0</a>
-    </ul>
-      
+      {{ govukButton({
+          text: "Continue",
+          href: "example/where-do-you-live"
+        }) }}
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
 
