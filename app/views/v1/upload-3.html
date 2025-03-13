@@ -1,0 +1,45 @@
+{% extends "layouts/standard.html" %}
+
+{% set pageName="v1.0" %}
+
+{% block beforeContent %}
+  <a href="/v1/upload-2" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/v1/upload-4" method="post">
+      <span class="govuk-caption-l">New response</span>
+      <h1 class="govuk-heading-l">Upload customer cover letter</h1>
+  
+      <div id="file-upload-container" class="govuk-form-group">
+        <label class="govuk-label" for="customer-cover-letter">
+          Select customer cover letter
+        </label>
+        <p class="govuk-hint">Choose a PDF smaller than 25MB</p>
+        <p id="file-upload-error-1" class="govuk-error-message govuk-!-margin-bottom-1 govuk-!-margin-top-1 govuk-visually-hidden">
+          <span class="govuk-visually-hidden">Error:</span> Document selected is not a customer cover letter
+        </p>
+        <input class="govuk-file-upload" id="customer-cover-letter" name="customer-cover-letter[]" type="file">
+      </div>
+
+      <div id="doc-preview" class="govuk-visually-hidden">
+        <img src="/public/images/upload3.png" alt="Document preview 3">
+      </div>
+  
+      <button id="submit-button" type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/upload-3.js"></script>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "layouts/standard.html" %}
+
+{% set pageName="v1.0" %}
+
+{% block beforeContent %}
+  <a href="/v1/home" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form class="form" action="/hmct-check-answer" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">New response</span>
+            <h1 class="govuk-fieldset__heading">
+              Have you uploaded the required files to HM Courts & Tribunals Service?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hmctCheck-1" name="hmct-check[]" type="radio" value="Yes" {{ checked('hmct-check','Yes') }}>
+              <label class="govuk-label govuk-radios__label" for="hmctCheck-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hmctCheck-2" name="hmct-check[]" type="radio" value="No" {{ checked('hmct-check','No') }}>
+              <label class="govuk-label govuk-radios__label" for="hmctCheck-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  
+  </div>
+</div>
+
+{% endblock %}
