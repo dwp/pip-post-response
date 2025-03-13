@@ -1,0 +1,25 @@
+{% extends "layouts/standard.html" %}
+
+{% set pageName="v1.0" %}
+
+{% block beforeContent %}
+  <a href="/v1/upload-hmct-check" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">New response</span>
+    <h1 class="govuk-heading-l">Please upload files to HM Courts & Tribunals Service</h1>
+
+    <p class="govuk-body">
+      You need also need to upload required files to the HM Courts & Tribunals Service. If you have not done this yet, 
+      please follow this link <a href="#">here</a> to complete this action.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

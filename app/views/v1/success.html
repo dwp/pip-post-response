@@ -1,0 +1,33 @@
+{% extends "layouts/standard.html" %}
+
+{% set pageName="v1.0" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Response sent
+      </h1>
+    </div>
+
+    <p class="govuk-body">All documents have been uploaded to the Document Repository Service (DRS)</p>
+
+    <p class="govuk-body govuk-!-font-weight-bold">What happens next:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>All documents would be automatically uploaded to DWP Services Portal (Xerox).</li>
+      <li>
+        Following actions would automatically be carried out in PIPCS:<br/>
+        a. Update appeal details<br/>
+        b. Trigger new communications record<br/>
+        c. Close appeal task<br/>
+      </li>
+    </ol>
+
+  </div>
+</div>
+
+{% endblock %}
